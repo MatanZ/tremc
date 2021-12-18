@@ -3216,7 +3216,7 @@ class Interface:
         line = "%s  %6.2f%%" % (str(index + 1).rjust(4), percent) + \
             '  ' + scale_bytes(length).rjust(7) + \
             '  ' + self.server.get_file_priority(self.torrent_details['id'], self.file_index_map[index]).center(8) + \
-            " %s| %s" % ('  ' * current_depth, name[0:self.width - 34 - current_depth])
+            " %s| %s" % ('  ' * current_depth, name[0:self.width - 35 - 2 * current_depth])
         return line
 
     def draw_peerlist(self, ypos):
